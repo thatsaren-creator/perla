@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parla Güzellik Salonu | İzmir Konak Profesyonel Cilt Bakımı & Estetik</title>
+<meta name="description" content="İzmir Konak'ta profesyonel cilt bakımı, güzellik ve estetik uygulamaları. Uzman kadro, steril ortam ve kişiye özel bakım protokolleri ile Parla Güzellik Salonu'nda ışıltınızı ortaya çıkarın.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        nude: { 50: '#FAFAFA', 100: '#F5E6E8', 200: '#EADBC8', 300: '#DEC5B0' },
+        gold: { 400: '#D4AF37', 500: '#C5A059', 600: '#A8884A' },
+        anthracite: { 900: '#2C221E', 800: '#3A2E28', 700: '#4A3D36' }
+      },
+      fontFamily: {
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Plus Jakarta Sans', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background: #FAFAFA; color: #2C221E; }
+  h1, h2, h3, h4, h5, h6, .font-serif { font-family: 'Playfair Display', serif; }
+  .gradient-gold { background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%); }
+  .gradient-nude { background: linear-gradient(135deg, #F5E6E8 0%, #EADBC8 100%); }
+  .gradient-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+  .text-gradient-gold { background: linear-gradient(135deg, #D4AF37 0%, #C5A059 50%, #A8884A 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .shimmer { position: relative; overflow: hidden; }
+  .shimmer::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); animation: shimmer 3s infinite; }
+  @keyframes shimmer { 0% { left: -100%; } 100% { left: 200%; } }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+  .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+  .animate-float { animation: float 4s ease-in-out infinite; }
+  .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25); }
+  .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .img-overlay { position: relative; overflow: hidden; }
+  .img-overlay::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(44,34,30,0.7) 0%, transparent 50%); z-index: 1; }
+  .img-overlay img { transition: transform 0.7s ease; }
+  .img-overlay:hover img { transform: scale(1.1); }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #F5E6E8; }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #D4AF37, #C5A059); border-radius: 10px; }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #D4AF37, #C5A059); transition: width 0.3s ease; }
+  .nav-link:hover::after { width: 100%; }
+  @media (max-width: 768px) { body { padding-bottom: 80px; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER / NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="glass border-b border-gold-400/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-full gradient-gold flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <span class="text-white font-serif font-bold text-xl">P</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl md:text-2xl font-bold text-anthracite-900 leading-tight">Parla</span>
+            <span class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gold-500 font-medium">Güzellik Salonu</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#hakkimizda" class="nav-link text-sm font-medium text-anthracite-800 hover:text-gold-500 transition-colors">Hakkımızda</a>
+          <a href="#hizmetler" class="nav-link text-sm font-medium text-anthracite-800 hover:text-gold-500 transition-colors">Hizmetler</a>
+          <a href="#instagram" class="nav-link text-sm font-medium text-anthracite-800 hover:text-gold-500 transition-colors">Instagram</a>
+          <a href="#yorumlar" class="nav-link text-sm font-medium text-anthracite-800 hover:text-gold-500 transition-colors">Müşteri Yorumları</a>
+          <a href="#iletisim" class="nav-link text-sm font-medium text-anthracite-800 hover:text-gold-500 transition-colors">İletişim</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="flex items-center gap-2 md:gap-3">
+          <a href="https://wa.me/905461491203?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Hizmetleriniz%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] hover:bg-[#1FB855] text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Randevu
+          </a>
+          <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full gradient-instagram text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all hover:scale-105">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span class="hidden md:inline">Instagram</span>
+          </a>
+          <!-- Mobile Menu Toggle -->
+          <button id="mobileMenuBtn" class="lg:hidden p-2 text-anthracite-900" onclick="toggleMobileMenu()">
+            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gold-400/20 bg-white">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#hakkimizda" onclick="closeMobileMenu()" class="block py-2 text-anthracite-800 font-medium hover:text-gold-500">Hakkımızda</a>
+        <a href="#hizmetler" onclick="closeMobileMenu()" class="block py-2 text-anthracite-800 font-medium hover:text-gold-500">Hizmetler</a>
+        <a href="#instagram" onclick="closeMobileMenu()" class="block py-2 text-anthracite-800 font-medium hover:text-gold-500">Instagram</a>
+        <a href="#yorumlar" onclick="closeMobileMenu()" class="block py-2 text-anthracite-800 font-medium hover:text-gold-500">Müşteri Yorumları</a>
+        <a href="#iletisim" onclick="closeMobileMenu()" class="block py-2 text-anthracite-800 font-medium hover:text-gold-500">İletişim</a>
+        <a href="tel:905461491203" class="flex items-center gap-2 py-2 text-anthracite-800 font-medium">
+          <svg class="w-4 h-4 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+          546 149 12 03
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+  <!-- Background -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 gradient-nude opacity-90"></div>
+    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=2000&q=80" alt="Parla Güzellik Salonu" class="w-full h-full object-cover opacity-25">
+    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+  </div>
+
+  <!-- Decorative Elements -->
+  <div class="absolute top-20 right-10 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl animate-float"></div>
+  <div class="absolute bottom-20 left-10 w-96 h-96 bg-nude-200/30 rounded-full blur-3xl animate-float" style="animation-delay: 1s;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left Content -->
+      <div class="text-center lg:text-left animate-fadeInUp">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 border border-gold-400/30 mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+          <span class="text-xs md:text-sm font-medium text-anthracite-800 tracking-wider uppercase">İzmir Konak'ın Parlayan Adresi</span>
+        </div>
+
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-anthracite-900 mb-6">
+          İzmir Konak'ta <br>
+          <span class="text-gradient-gold italic font-medium">Işıltınızı</span> ve <br>
+          Doğal Güzelliğinizi <br>
+          <span class="text-gradient-gold italic font-medium">Ortaya Çıkarın</span>
+        </h1>
+
+        <p class="text-base md:text-lg lg:text-xl text-anthracite-700 leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
+          Profesyonel cilt bakımı, estetisyenlik çözümleri ve kişiye özel bakım rutinlerimizle cildinize hak ettiği değeri verin.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-10">
+          <a href="https://wa.me/905461491203?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Hizmetleriniz%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener" class="shimmer group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#25D366] hover:bg-[#1FB855] text-white font-semibold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Hızlı WhatsApp Randevu
+          </a>
+
+          <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full gradient-instagram text-white font-semibold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram'da Takip Et
+          </a>
+
+          <a href="https://maps.app.goo.gl/fYsBCGWSj1PhjqHQ8" target="_blank" rel="noopener" class="group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-white border-2 border-anthracite-900 text-anthracite-900 font-semibold shadow-lg hover:shadow-xl hover:bg-anthracite-900 hover:text-white transition-all">
+            <svg class="w-5 h-5 text-gold-500 group-hover:text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Yol Tarifi Al
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-anthracite-700">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="font-semibold">4.9 / 5 Puan</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="font-semibold">Steril & Hijyenik</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span class="font-semibold">Uzman Estetisyen</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="relative hidden lg:block">
+        <div class="relative">
+          <div class="absolute -top-6 -left-6 w-full h-full rounded-3xl gradient-gold opacity-20"></div>
+          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80" alt="Cilt Bakımı" class="relative rounded-3xl shadow-2xl w-full h-[600px] object-cover">
+          <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-5 shadow-2xl animate-float">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full gradient-gold flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div>
+                <div class="font-serif text-xl font-bold text-anthracite-900">500+</div>
+                <div class="text-xs text-anthracite-700">Mutlu Müşteri</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HAKKIMIZDA -->
+<section id="hakkimizda" class="py-20 lg:py-28 bg-white relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-96 h-96 bg-nude-100 rounded-full blur-3xl opacity-50 -translate-x-1/2 -translate-y-1/2"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-gold-400/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-nude-100 text-gold-600 text-xs font-semibold tracking-wider uppercase mb-4">Hakkımızda</span>
+      <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-anthracite-900 mb-6">
+        Güzelliğinize <span class="text-gradient-gold italic">Değer</span> Katıyoruz
+      </h2>
+      <p class="text-lg text-anthracite-700 max-w-3xl mx-auto leading-relaxed">
+        Parla Güzellik Salonu olarak, hijyenik çalışma prensipleri, uzman estetisyen yaklaşımı ve müşteri memnuniyeti odaklı hizmet anlayışımızla İzmir Konak'ta sizleri ağırlıyoruz.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-hover group p-8 rounded-2xl bg-gradient-to-br from-white to-nude-50 border border-nude-100 text-center">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-2xl gradient-gold flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-anthracite-900 mb-3">Uzman Kadro & İlgi</h3>
+        <p class="text-sm text-anthracite-700 leading-relaxed">Alanında uzman estetisyenlerimizle kişiye özel ilgi ve profesyonel yaklaşım.</p>
+      </div>
+
+      <div class="card-hover group p-8 rounded-2xl bg-gradient-to-br from-white to-nude-50 border border-nude-100 text-center">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-2xl gradient-gold flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-anthracite-900 mb-3">%100 Steril & Hijyenik</h3>
+        <p class="text-sm text-anthracite-700 leading-relaxed">En yüksek hijyen standartlarıyla, sterilize edilmiş ekipman ve güvenli ortam.</p>
+      </div>
+
+      <div class="card-hover group p-8 rounded-2xl bg-gradient-to-br from-white to-nude-50 border border-nude-100 text-center">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-2xl gradient-gold flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-anthracite-900 mb-3">4.9 Yüksek Puan</h3>
+        <p class="text-sm text-anthracite-700 leading-relaxed">Google üzerinden 4.9 / 5 yıldız puanı ile kanıtlanmış müşteri memnuniyeti.</p>
+      </div>
+
+      <div class="card-hover group p-8 rounded-2xl bg-gradient-to-br from-white to-nude-50 border border-nude-100 text-center">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-2xl gradient-gold flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-anthracite-900 mb-3">Kişiye Özel Bakım</h3>
+        <p class="text-sm text-anthracite-700 leading-relaxed">Cilt tipinize ve ihtiyaçlarınıza özel hazırlanmış bakım protokolleri.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HİZMETLER -->
+<section id="hizmetler" class="py-20 lg:py-28 gradient-nude relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-white text-gold-600 text-xs font-semibold tracking-wider uppercase mb-4">Hizmetlerimiz</span>
+      <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-anthracite-900 mb-6">
+        Size Özel <span class="text-gradient-gold italic">Bakım</span> Çözümleri
+      </h2>
+      <p class="text-lg text-anthracite-700 max-w-3xl mx-auto leading-relaxed">
+        Her biri alanında uzman estetisyenlerimiz tarafından, modern teknikler ve premium ürünlerle uygulanan hizmetlerimiz.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Service 1 -->
+      <div class="card-hover group bg-white rounded-3xl overflow-hidden shadow-xl">
+        <div class="img-overlay h-72">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Profesyonel Cilt Bakımı" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 z-10 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-xs font-semibold text-anthracite-900 tracking-wider">01</div>
+        </div>
+        <div class="p-7">
+          <h3 class="font-serif text-2xl font-bold text-anthracite-900 mb-3 group-hover:text-gold-500 transition-colors">Profesyonel Cilt Bakımı</h3>
+          <p class="text-anthracite-700 leading-relaxed mb-6 text-sm">
+            Medikal cilt bakımı, derinlemesine temizlik ve cildinize parlaklık kazandıran yenileme maskeleri ile ışıltılı bir görünüm.
+          </p>
+          <a href="https://wa.me/905461491203?text=Merhaba,%20Cilt%20Bak%C4%B1m%C4%B1%20hizmetiniz%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#1FB855] text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp ile Bilgi Al
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="card-hover group bg-white rounded-3xl overflow-hidden shadow-xl">
+        <div class="img-overlay h-72">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Güzellik & Estetik" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 z-10 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-xs font-semibold text-anthracite-900 tracking-wider">02</div>
+        </div>
+        <div class="p-7">
+          <h3 class="font-serif text-2xl font-bold text-anthracite-900 mb-3 group-hover:text-gold-500 transition-colors">Güzellik & Estetik Uygulamaları</h3>
+          <p class="text-anthracite-700 leading-relaxed mb-6 text-sm">
+            İpek kirpik, kaş tasarımı ve kalıcı makyaj çözümleri ile bakışlarınıza derinlik, yüzünüze karakter kazandırıyoruz.
+          </p>
+          <a href="https://wa.me/905461491203?text=Merhaba,%20G%C3%BCzellik%20ve%20Estetik%20Uygulamalar%C4%B1%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#1FB855] text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp ile Bilgi Al
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="card-hover group bg-white rounded-3xl overflow-hidden shadow-xl">
+        <div class="img-overlay h-72">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="El & Tırnak Bakımı" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 z-10 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-xs font-semibold text-anthracite-900 tracking-wider">03</div>
+        </div>
+        <div class="p-7">
+          <h3 class="font-serif text-2xl font-bold text-anthracite-900 mb-3 group-hover:text-gold-500 transition-colors">El & Tırnak Bakımı</h3>
+          <p class="text-anthracite-700 leading-relaxed mb-6 text-sm">
+            Estetik manikür, kalıcı oje ve tırnak sağlığını destekleyen özel uygulamalarla bakımlı ve şık eller.
+          </p>
+          <a href="https://wa.me/905461491203?text=Merhaba,%20El%20ve%20T%C4%B1rnak%20Bak%C4%B1m%C4%B1%20hizmetiniz%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#1FB855] text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp ile Bilgi Al
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM SECTION -->
+<section id="instagram" class="py-20 lg:py-28 bg-white relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-nude-100 rounded-full blur-3xl opacity-40"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full gradient-instagram text-white text-xs font-semibold tracking-wider uppercase mb-4">
+        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </span>
+      <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-anthracite-900 mb-6">
+        Işıltılı Dönüşümleri <br><span class="text-gradient-gold italic">Instagram'da</span> Keşfedin
+      </h2>
+      <p class="text-lg text-anthracite-700 max-w-3xl mx-auto leading-relaxed">
+        <span class="font-semibold text-gold-600">@parlaguzelliikk</span> hesabımızı takip ederek en güncel uygulamalarımızı, müşteri dönüşümlerimizi ve salon atmosferimizi inceleyebilirsiniz.
+      </p>
+    </div>
+
+    <!-- Instagram Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="img-overlay group relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1633681926167-7c1c7b5b8b34?auto=format&fit=crop&w=600&q=80" alt="Parla Instagram 1" class="w-full h-full object-cover">
+        <div class="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+          <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="img-overlay group relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=80" alt="Parla Instagram 2" class="w-full h-full object-cover">
+        <div class="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+          <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="img-overlay group relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Parla Instagram 3" class="w-full h-full object-cover">
+        <div class="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+          <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="img-overlay group relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1610992015732-2449b76344e1?auto=format&fit=crop&w=600&q=80" alt="Parla Instagram 4" class="w-full h-full object-cover">
+        <div class="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+          <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+      </a>
+    </div>
+
+    <div class="text-center">
+      <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="shimmer inline-flex items-center gap-3 px-8 py-4 rounded-full gradient-instagram text-white font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all hover:scale-105">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @parlaguzelliikk'i Takip Et
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MÜŞTERİ YORUMLARI -->
+<section id="yorumlar" class="py-20 lg:py-28 bg-anthracite-900 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-10 left-10 w-72 h-72 bg-gold-400 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-72 h-72 bg-nude-200 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-gold-400/20 text-gold-400 text-xs font-semibold tracking-wider uppercase mb-4">Müşteri Yorumları</span>
+      <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        Onların <span class="text-gradient-gold italic">Işıltısı</span>, Bizim Gururumuz
+      </h2>
+
+      <!-- Google Rating Badge -->
+      <div class="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 mt-4">
+        <div class="flex flex-col items-start">
+          <div class="flex items-center gap-1">
+            <span class="font-serif text-4xl font-bold text-white">4.9</span>
+            <span class="text-white/60 text-lg">/5</span>
+          </div>
+          <div class="flex gap-0.5 mt-1">
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+        </div>
+        <div class="h-12 w-px bg-white/20"></div>
+        <div class="text-left">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            <span class="text-white font-semibold">Google Reviews</span>
+          </div>
+          <p class="text-white/60 text-xs mt-1">Doğrulanmış müşteri değerlendirmesi</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Grid -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Review 1 -->
+      <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-7 card-hover">
+        <div class="flex items-center gap-1 mb-4">
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-white/90 leading-relaxed mb-6 italic font-serif text-lg">
+          "Personelin ilgisi ve güler yüzü harika! Cilt bakımı sonrası cildim çok parlak ve sağlıklı göründü. Kesinlikle tavsiye ediyorum."
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div class="w-10 h-10 rounded-full gradient-gold flex items-center justify-center font-serif font-bold text-white">S</div>
+          <div>
+            <div class="text-white font-semibold text-sm">Selin K.</div>
+            <div class="text-white/50 text-xs">Google Yorumu</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-7 card-hover">
+        <div class="flex items-center gap-1 mb-4">
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-white/90 leading-relaxed mb-6 italic font-serif text-lg">
+          "Hijyen standartları çok yüksek, salon pırıl pırıl. Kirpik ve kaş uygulamam muhteşem oldu. Çok memnun kaldım, teşekkürler!"
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div class="w-10 h-10 rounded-full gradient-gold flex items-center justify-center font-serif font-bold text-white">A</div>
+          <div>
+            <div class="text-white font-semibold text-sm">Ayşe M.</div>
+            <div class="text-white/50 text-xs">Google Yorumu</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-7 card-hover">
+        <div class="flex items-center gap-1 mb-4">
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-white/90 leading-relaxed mb-6 italic font-serif text-lg">
+          "Manikür ve kalıcı oje uygulamaları inanılmaz özenli yapıldı. Ellerim hiç bu kadar bakımlı görünmemişti. Kesinlikle düzenli müşterisi olacağım."
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div class="w-10 h-10 rounded-full gradient-gold flex items-center justify-center font-serif font-bold text-white">D</div>
+          <div>
+            <div class="text-white font-semibold text-sm">Deniz T.</div>
+            <div class="text-white/50 text-xs">Google Yorumu</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-7 card-hover md:col-span-3 lg:col-span-3 max-w-2xl mx-auto">
+        <div class="flex items-center gap-1 mb-4">
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-white/90 leading-relaxed mb-6 italic font-serif text-lg text-center">
+          "Parla Güzellik Salonu, İzmir'de bulduğum en profesyonel ve steril salon. Uzman kadrosu, ilgisi ve kaliteli hizmet anlayışıyla her ziyaretimde kendimi özel hissediyorum. Kesinlikle İzmir Konak'ın en iyisi!"
+        </p>
+        <div class="flex items-center justify-center gap-3 pt-4 border-t border-white/10">
+          <div class="w-10 h-10 rounded-full gradient-gold flex items-center justify-center font-serif font-bold text-white">E</div>
+          <div class="text-left">
+            <div class="text-white font-semibold text-sm">Elif Y.</div>
+            <div class="text-white/50 text-xs">Google Yorumu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="py-20 gradient-nude relative overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gold-400/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-nude-300/30 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="bg-anthracite-900 rounded-3xl p-8 md:p-14 lg:p-20 text-center shadow-2xl relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 gradient-gold opacity-10 rounded-full blur-3xl"></div>
+
+      <span class="inline-block px-4 py-1.5 rounded-full bg-gold-400/20 text-gold-400 text-xs font-semibold tracking-wider uppercase mb-6">Randevunuzu Oluşturun</span>
+      <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        Işıltılı Bir <span class="text-gradient-gold italic">Dönüşüm</span> İçin <br>İlk Adımı Atın
+      </h2>
+      <p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+        Hemen WhatsApp üzerinden randevunuzu oluşturun, cildinize ve güzelliğinize hak ettiği profesyonel bakımı verin.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/905461491203?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Randevu%20olu%C5%9Fturmak%20istiyorum." target="_blank" rel="noopener" class="shimmer inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1FB855] text-white font-semibold text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp'tan Randevu Al
+        </a>
+        <a href="tel:905461491203" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-anthracite-900 font-semibold text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+          546 149 12 03
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER & İLETİŞİM -->
+<footer id="iletisim" class="bg-anthracite-900 text-white pt-20 pb-32 md:pb-12 relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-3 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-12 h-12 rounded-full gradient-gold flex items-center justify-center shadow-lg">
+            <span class="text-white font-serif font-bold text-2xl">P</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-2xl font-bold leading-tight">Parla</span>
+            <span class="text-xs uppercase tracking-[0.2em] text-gold-400 font-medium">Güzellik Salonu</span>
+          </div>
+        </div>
+        <p class="text-white/60 leading-relaxed mb-6 max-w-sm">
+          İzmir Konak'ın kalbinde, profesyonel estetisyen kadromuz ve steril ortamımızla güzelliğinize değer katıyoruz.
+        </p>
+        <div class="flex gap-3">
+          <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full gradient-instagram flex items-center justify-center hover:scale-110 transition-transform">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/905461491203" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:scale-110 transition-transform">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="font-serif text-xl font-bold mb-5 text-gradient-gold">İletişim & Konum</h3>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold-400/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <div class="text-xs text-white/50 uppercase tracking-wider mb-1">Adres</div>
+              <div class="text-white/90 text-sm leading-relaxed">Altıntaş, 365. Sk. No:1 D:C, 35260 Konak / İzmir</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold-400/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+            </div>
+            <div>
+              <div class="text-xs text-white/50 uppercase tracking-wider mb-1">Telefon</div>
+              <a href="tel:905461491203" class="text-white/90 text-sm hover:text-gold-400 transition-colors">546 149 12 03</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold-400/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <div>
+              <div class="text-xs text-white/50 uppercase tracking-wider mb-1">Instagram</div>
+              <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="text-white/90 text-sm hover:text-gold-400 transition-colors">@parlaguzelliikk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Working Hours + Map -->
+      <div>
+        <h3 class="font-serif text-xl font-bold mb-5 text-gradient-gold">Çalışma Saatleri</h3>
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center justify-between py-2 border-b border-white/10">
+            <span class="text-white/80 text-sm">Pazartesi - Cumartesi</span>
+            <span class="text-gold-400 font-semibold text-sm">10:00 - 19:00</span>
+          </div>
+          <div class="flex items-center justify-between py-2">
+            <span class="text-white/80 text-sm">Pazar</span>
+            <span class="text-red-400 font-semibold text-sm">Kapalı</span>
+          </div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/fYsBCGWSj1PhjqHQ8" target="_blank" rel="noopener" class="group block rounded-2xl overflow-hidden border border-gold-400/30 hover:border-gold-400 transition-all">
+          <div class="relative h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Konum Harita" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+            <div class="absolute inset-0 bg-gradient-to-t from-anthracite-900 via-anthracite-900/60 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <div class="w-12 h-12 rounded-full gradient-gold flex items-center justify-center shadow-2xl mx-auto mb-2 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div class="text-white font-semibold text-sm">Haritada Aç</div>
+                <div class="text-white/70 text-xs">Yol Tarifi Al</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <p class="text-white/50 text-sm">© 2025 Parla Güzellik Salonu. Tüm hakları saklıdır.</p>
+      <p class="text-white/50 text-sm">
+        İzmir Konak'ta <span class="text-gold-400 font-medium">profesyonel cilt bakımı</span> ve güzellik hizmetleri
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING MOBILE BOTTOM BAR -->
+<div class="fixed bottom-0 left-0 right-0 z-40 md:hidden glass border-t border-gold-400/30 shadow-2xl">
+  <div class="grid grid-cols-3 gap-1 p-2">
+    <a href="https://wa.me/905461491203?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 py-2 rounded-xl bg-[#25D366] text-white shadow-md active:scale-95 transition-transform">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span class="text-[10px] font-semibold">Randevu</span>
+    </a>
+    <a href="https://www.instagram.com/parlaguzelliikk/" target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 py-2 rounded-xl gradient-instagram text-white shadow-md active:scale-95 transition-transform">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      <span class="text-[10px] font-semibold">Instagram</span>
+    </a>
+    <a href="https://maps.app.goo.gl/fYsBCGWSj1PhjqHQ8" target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 py-2 rounded-xl bg-anthracite-900 text-white shadow-md active:scale-95 transition-transform">
+      <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      <span class="text-[10px] font-semibold">Yol Tarifi</span>
+    </a>
+  </div>
+</div>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('shadow-lg');
+      navbar.querySelector('.glass').classList.add('shadow-md');
+    } else {
+      navbar.classList.remove('shadow-lg');
+      navbar.querySelector('.glass').classList.remove('shadow-md');
+    }
+  });
+
+  // Mobile menu toggle
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    menu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  }
+
+  function closeMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    menu.classList.add('hidden');
+    menuIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+  }
+
+  // Intersection Observer for fade-in animations
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fadeInUp');
+        entry.target.style.opacity = '1';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section > div').forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
